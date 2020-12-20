@@ -64,7 +64,7 @@ function cbarbs(Pascent, Tascent, U, V, current_timestamp, dataOptions, cmaxP, c
         // Fill the text in using another g layer
 		svg.append("g")
 			.append("text")
-			.html(dataOptions.model+'\xa0\xa0\xa0'+Math.round(z)+" km \xa0\xa0  "+Math.round(P)+" hPa \xa0\xa0  "+Math.round(WSpeed)+" kt \xa0/\xa0"+Math.round(wdir)+"&#176\xa0\xa0\xa0\xa0 "+Tascent[widx]+"&#176C")
+			.html(dataOptions.model+'\xa0\xa0\xa0'+Math.round(z*100)/100+" km \xa0\xa0  "+Math.round(P)+" hPa \xa0\xa0  "+Math.round(WSpeed)+" kt \xa0/\xa0"+Math.round(wdir)+"&#176\xa0\xa0\xa0\xa0 "+Tascent[widx]+"&#176C")
 			.attr("x", w-0.64*w)
 			.attr("y", 0.035*h)
 			.attr("font-family", "sans-serif")

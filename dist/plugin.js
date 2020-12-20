@@ -416,7 +416,7 @@ function () {
       }
 
       var z = -10.0 * Math.log(P / Pascent[0]);
-      svg.append("g").append("text").html(dataOptions.model + '\xa0\xa0\xa0' + Math.round(z) + " km \xa0\xa0  " + Math.round(P) + " hPa \xa0\xa0  " + Math.round(WSpeed) + " kt \xa0/\xa0" + Math.round(wdir) + "&#176\xa0\xa0\xa0\xa0 " + Tascent[widx] + "&#176C").attr("x", w - 0.64 * w).attr("y", 0.035 * h).attr("font-family", "sans-serif").attr("font-family", "Arial").attr("font-size", 0.03 * h + "px").attr("fill", "#cccccc").attr("id", "statsID");
+      svg.append("g").append("text").html(dataOptions.model + '\xa0\xa0\xa0' + Math.round(z * 100) / 100 + " km \xa0\xa0  " + Math.round(P) + " hPa \xa0\xa0  " + Math.round(WSpeed) + " kt \xa0/\xa0" + Math.round(wdir) + "&#176\xa0\xa0\xa0\xa0 " + Tascent[widx] + "&#176C").attr("x", w - 0.64 * w).attr("y", 0.035 * h).attr("font-family", "sans-serif").attr("font-family", "Arial").attr("font-size", 0.03 * h + "px").attr("fill", "#cccccc").attr("id", "statsID");
     }
 
     window.svgbarbs = svg.append("rect").attr('x', w).attr("height", barbsh).attr("width", barbsw).attr("fill", "#424040").attr("opacity", 1.0).attr('id', 'barbsd3');
