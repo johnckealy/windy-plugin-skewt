@@ -440,7 +440,7 @@ function () {
       var isoPathString = lineGenerator(Px);
       var strID = 'tooltip-isobar';
       svg.append("path").attr('id', strID).attr('d', isoPathString).style("fill", 'none').style("stroke-width", 0.5).style("stroke", 'blue');
-      svg.append("g").append("text").html(model + '\xa0\xa0\xa0' + z.toFixed(1) + " km \xa0\xa0  " + P.toFixed(0) + " hPa \xa0\xa0  " + WSpeed + " kt \xa0/\xa0" + Math.round(wdir) + "&#176\xa0\xa0\xa0\xa0 " + Tascent[widx].toFixed(1) + "&#176C").attr("x", w - 0.64 * w).attr("y", 0.035 * h).attr("font-family", "sans-serif").attr("font-family", "Arial").attr("font-size", 0.03 * h + "px").attr("fill", "#cccccc").attr("id", "statsID");
+      svg.append("g").append("text").html(model + '\xa0\xa0\xa0' + z.toFixed(2) + " km \xa0\xa0  " + P.toFixed(0) + " hPa \xa0\xa0  " + WSpeed + " kt \xa0/\xa0" + Math.round(wdir) + "&#176\xa0\xa0\xa0\xa0 " + Tascent[widx].toFixed(1) + "&#176C").attr("x", w - 0.64 * w).attr("y", 0.035 * h).attr("font-family", "sans-serif").attr("font-family", "Arial").attr("font-size", 0.03 * h + "px").attr("fill", "#cccccc").attr("id", "statsID");
     }
 
     window.svgbarbs = svg.append("rect").attr('x', w).attr("height", barbsh).attr("width", barbsw).attr("fill", "#424040").attr("opacity", 1.0).attr('id', 'barbsd3');
