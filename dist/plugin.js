@@ -906,7 +906,7 @@ function () {
         }
       }
 
-      var refPressures = [950, 925, 900, 850, 800, 700, 600, 500, 400, 300, 200, 150];
+      var refPressures = [950, 925, 900, 850, 800, 700, 600, 500, 400, 300, 250, 200, 150];
       var Pascent = refPressures.filter(function (refPressure) {
         return refPressure < surfacePressure;
       });

@@ -157,7 +157,7 @@ const activate_SkewT = latLon => {
             }
         }
 
-        const refPressures = [950, 925, 900, 850, 800, 700, 600, 500, 400, 300, 200, 150];
+        const refPressures = [950, 925, 900, 850, 800, 700, 600, 500, 400, 300, 250, 200, 150];
         var Pascent = refPressures.filter((refPressure) => refPressure < surfacePressure);
         var Tdascent = get_data(data, Pascent, 'dewpoint', tidx);
         var Tascent = get_data(data, Pascent, 'temp', tidx);
