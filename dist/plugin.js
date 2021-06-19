@@ -28,7 +28,7 @@ W.loadPlugin(
 /* Mounting options */
 {
   "name": "windy-plugin-skewt",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": "John C. Kealy",
   "repository": {
     "type": "git",
@@ -434,7 +434,7 @@ function () {
         P = 170;
       }
 
-      var z = -10.0 * Math.log(P / Pascent[0]);
+      var z = 0.3048 * 145.36645 * (1 - Math.pow(P / Pascent[0], 0.190284));
       var Px = [[0, y], [w, y]];
       var lineGenerator = d3.line();
       var isoPathString = lineGenerator(Px);

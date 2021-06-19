@@ -88,7 +88,7 @@ function cbarbs(Pascent, Tascent, U, V, current_timestamp, dataOptions, cmaxP, c
 		} else if (P <= 170) {
 			P = 170;
 		}
-		var z = -10.0 * Math.log(P / Pascent[0]);
+		var z = 0.3048 * 145.36645 * (1 - ((P/Pascent[0])**(0.190284)))
 
 		// Blue line that follows the tooltip up and down
 		var Px = [[0, y], [w, y]];
