@@ -26,6 +26,7 @@ var RetryAttemptsSpot = 0;
 var RetryAttemptsAir = 0;
 const SkewTApiPath = 'https://apiv2.skewt.org';
 var sondeMarker;
+window.currentModel = store.get('product')
 
 const options = {
     key: 'psfAt10AZ7JJCoM3kz0U1ytDhTiLNJN3',
@@ -33,6 +34,13 @@ const options = {
 }
 
 const load = pluginDataLoader(options)
+
+setInterval(function() {
+    if (store.get('product') != window.currentModel) {
+        window.currentModel = store.get('product')
+        activate_SkewT();
+    }
+}, 2000);
 
 
 // Run the plugin based on invoking the picker

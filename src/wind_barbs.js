@@ -5,7 +5,7 @@ function cbarbs(Pascent, Tascent, U, V, current_timestamp, dataOptions, cmaxP, c
 	and wind direction at the mouse pointer location. */
 	let model;
 	if (dataOptions.model != 'sonde') {
-		model = store.get('product').toUpperCase();
+		model = window.currentModel.toUpperCase();
 	} else {
 		model = dataOptions.model.toUpperCase();
 	}
